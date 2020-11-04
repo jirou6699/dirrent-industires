@@ -1,0 +1,83 @@
+.Image01-content
+  = image_tag 'top1.jpg', size: "1440x600", alt: "test", class: "Image01-content__image"
+  .Textbox
+    .Textbox__text
+      転職を考えたら
+      %br
+      社会人こそOB訪問
+    .Box
+      .Box__content
+        .Box__content--text
+          国内最大級
+      .Box__content
+        .Box__content--text
+          オンライン可
+      .Box__content
+        .Box__content--text
+          独立・起業にも
+    .Top
+      .Top__text
+        利用規約、個人情報保護方針に関して
+    .Login
+      .Login__text
+        新規登録する・ログイン
+.Image02-content
+  .Center-content
+    .Up-content
+      .Box
+        .Box__up
+          = image_tag 'middle1.jpg', size: "215x170", alt: "test", class: "Image01-content__image"
+        .Box__middle
+          興味のあるキャリア経験談を
+          %br
+          聞こう！
+        .Box__bottom
+          さまざまな企業・職種・テーマに関するリ
+          アルな情報を経験者から聞くことができま
+          す。1クリックで始められるビデオ通話も
+          搭載！
+      .Box
+        .Box__up
+          = image_tag 'middle2.jpg', size: "215x170", alt: "test", class: "Image01-content__image"
+        .Box__middle
+          自分のキャリア経験談を
+          %br
+          話そう！
+        .Box__bottom
+          キャリア経験談を登録すると、話を聞きたい人から申し込みが届きます。
+          テンプレートや例が表示されるので、経験談の登録はとてもかんたん！
+      .Box
+        .Box__up
+          = image_tag 'middle3.jpg', size: "215x170", alt: "test", class: "Image01-content__image"
+        .Box__middle
+          気になる企業の社員と
+          %br
+          つながろう！
+        .Box__bottom
+          「メンバー募集中」ラベルをつけているユーザーと気軽にカジュアル面談
+          してみましょう。特別な転職・副業オファーがもらえるかも！
+    .Bottom-content
+      .Bottom-content__text
+        .Bottom-content__text--color
+          はじめてのかたはこちら
+
+.Middle-wrapper
+  .Middle
+    .Middle__text
+      みんなの経験談をみてみよう！
+  .Search-body
+    .Header
+      経験談を探す
+    .Search
+      フリーワードで探す
+    .Search-box
+      = form_with url: "#", local: true, method: :get do |form|
+        .Search-box__input
+          = form.text_field :keyword, class: 'Search-box__input--field', placeholder: '仕事を検索する'
+        
+        
+        .Search-box__button
+          = form.submit '検索', class: 'Search-box__button--text'
+    
+
+

@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+.Image01-content{
+  position: relative;
+    &__image {
+    opacity: 0.7;
+  }
+  .Textbox {
+    width: 550px;
+    height: 335px;
+    position: absolute;
+    top: 140px;
+    left: 180px;
+    &__text{
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 48px;
+    }
+    .Box {
+      width: 500px;
+      height: 50px;
+      display: flex;
+      justify-content: space-evenly;
+      margin: 0 auto 30px;
+      &__content {
+        width: 156px;
+        height: 50px;
+        padding: 12px 0;
+        text-align: center;
+        background-color: white;
+        border-radius: 10px;
+
+      }
+    }
+    .Top {
+      text-align: center;
+      &__text {
+        margin-bottom: 5px;
+      }
+    }
+    .Login {
+      width: 500px;
+      height: 55px;
+      background-color: cornflowerblue;
+      border-radius: 10px;
+      text-align: center;
+      padding: 15px 0;
+      margin: 0 auto 5px;
+      &__text {
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+}
+.Image02-content {
+  background-color: linen;
+  max-width: 1440px;
+  height: 500px;
+  .Center-content {
+    width: 900px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 40px 0;
+    .Up-content {
+      display: flex;
+      justify-content: space-evenly;
+      width: 900px;
+      height: 370px;
+      .Box {
+        width: 270px;
+        height: 330px;
+        &__up {
+          margin: 0 25px 10px;
+        }
+        &__middle {
+          width: 270px;
+          height: 48px;
+          text-align: center;
+          margin-bottom: 10px;
+          font-size: 17px;
+          text-align: center;
+          
+        }
+        &__bottom {
+          width: 270px;
+          height: 92px;
+          font-size: 14px;
+          text-align: center;
+        }
+      }
+    }
+    .Bottom-content {
+      height: 46px;
+      width: 290px;
+      margin: 0 auto;
+      &__text {
+        text-align: center;
+        line-height: 46px;
+        background-color: cornflowerblue;
+        border-radius: 10px;
+        &--color {
+          color: white;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.Middle-wrapper {
+  .Middle {
+    text-align: center;
+    &__text {
+      margin: 40px 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+  .Search-body {
+    margin: 0 auto;
+    padding: 20px;
+    width: 900px;
+    height: 730px;
+    border: 2px solid lightskyblue;
+    border-radius: 10px;
+    .Header {
+      font-size: 17px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .Search {
+      border-left: 5px solid green;
+      padding-left: 3px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .Search-box {
+      &__input {
+        &--field {
+          width: 856px;
+          height: 48px;
+          border-radius: 10px;
+          border: 0.5px solid gray;
+          padding: 12px;
+        }
+      }
+    }
+  }
+}
