@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+.Header{
+  height: 70px;
+  padding: 20px 0;
+  // background-color: aquamarine;
+  .Center {
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    // background-color: brown;
+    .Center-right {
+      padding: 5px 40px;
+      background-color: cornflowerblue;
+      border-radius: 10px;
+      .Center-right__login {
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+}
