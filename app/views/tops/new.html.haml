@@ -1,0 +1,24 @@
+.Create-wrapper
+  = form_with url: "#", local: true do |form|
+    .Title01
+      経験談を登録する
+    .Title02
+      どの経歴について話しますか？
+    .Format
+      .Format-content01    
+        .Format-content01__left
+          会社・所属組織名
+        .Format-content01__right
+          必須
+      .Input
+        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
+    .Format
+      .Format-content01    
+        .Format-content01__left
+          担当役職・肩書き
+        .Format-content01__right
+          必須
+      .Input
+        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
+    .Title02
+      どの経歴について話しますか？
