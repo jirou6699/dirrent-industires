@@ -207,4 +207,16 @@
       }
     }
   }
+  .Button-content {
+    text-align: center;
+    margin: 40px 0 70px;
+    &__btn {
+      padding: 15px 95px;
+      border-radius: 20px;
+      background-color: blue;
+      border: none;
+      color: white;
+      font-weight: bold;
+    }
+  }
 }

@@ -110,7 +110,7 @@
         = form.check_box :sex ,{checked: true}, "true", "false"
         %span ビデオ通話のみ可能
     .Format03
-      .Format-content01    
+      .Format-content01
         %h4.Format-content01__left
           話す時間
       %h5.Format-content02
@@ -145,4 +145,5 @@
       .Input
         = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
         -# = form.collection_select :shippingcost_id, Shippingcost.all, :id, :name, {include_blank: "選択してください"}, {class: 'input-string__form'}
-    
+    .Button-content
+      = form.submit '内容を登録する', class: 'Button-content__btn'
