@@ -107,7 +107,7 @@
         %br
         ビデオ通話のみで話したい場合はチェックを入れてください。
       .Check
-        = form.check_box :sex ,{checked: true}, "true", "false"
+        = form.check_box :talk ,{checked: true}, "true", "false"
         %span ビデオ通話のみ可能
     .Format03
       .Format-content01
@@ -116,7 +116,7 @@
       %h5.Format-content02
         30分から最長３時間まで（30分ごとに選択できます）
       .Input
-        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
+        = form.number_field :talk_time, class: 'Input__text', placeholder: 'type a message', min: 30, max: 180
         -# = form.collection_select :shippingcost_id, Shippingcost.all, :id, :name, {include_blank: "選択してください"}, {class: 'input-string__form'}
     .Format03
       .Format-content01    
