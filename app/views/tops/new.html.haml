@@ -1,0 +1,149 @@
+.Create-wrapper
+  = form_with url: "#", local: true do |form|
+    %h2.Title01
+      経験談を登録する
+    %h3.Title02
+      どの経歴について話しますか？
+    .Format
+      .Format-content01
+        %h4.Format-content01__left
+          会社・所属組織名
+        %h6.Format-content01__right
+          必須
+      .Input
+        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
+    .Format
+      .Format-content01    
+        %h4.Format-content01__left
+          担当役職・肩書き
+        %h6.Format-content01__right
+          必須
+      .Input
+        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
+    %h4.Title03
+      どんな内容について話しますか？
+    .Example
+      .Example-top
+        %h4.Example-top__title
+          どんな内容を話すか迷った時は？
+        %h5.Example-top__text
+          例えばこんな内容が登録されています！参考にしてみてください！
+      .Example-middle
+        %h4.Example-middle__title 
+          会社・組織や仕事内容について話す
+        %ul.Example-middle__sentence
+          %li.Example-middle__sentence--text 
+            所属している組織について話します。
+          %li.Example-middle__sentence--text
+            会社・組織の風土について話します。
+          %li.Example-middle__sentence--text
+            現在の仕事内容の厳しさについて話します。
+          %li.Example-middle__sentence--text
+            所属している会社での働き方について話します。
+      .Example-middle
+        %h4.Example-middle__title 
+          業種・業態について話す
+        %ul.Example-middle__sentence
+          %li.Example-middle__sentence--text 
+            業界全体像について話します！
+          %li.Example-middle__sentence--text
+            未経験からの転職事情についてはなします！
+          %li.Example-middle__sentence--text
+            未経験ならではの厳しさについて話します！
+      .Example-middle
+        %h4.Example-middle__title 
+          キャリアパスについて話します！
+        %ul.Example-middle__sentence
+          %li.Example-middle__sentence--text 
+            転職してわかったキャリア形成の仕方について話します！
+          %li.Example-middle__sentence--text
+            社内でのジョブチェンジについて話します！
+          %li.Example-middle__sentence--text
+            社会人留学について話します！
+    .Format01
+      .Format01-top
+        .Format-content01
+          %h4.Format-content01__left
+            タイトル
+          %h6.Format-content01__right
+            必須
+        %h6.Format-content02
+          0/40
+      .Input
+        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
+      .Text
+        について話します！
+    .Format02
+      .Format-content01
+        %h4.Format-content01__left
+          詳細
+        %h6.Format-content01__right
+          0/400
+      %h5.Format-content02
+        経歴や内容の詳細、どんな人におすすめなのかなどを書きましょう！
+      .Input
+        = form.text_area :name, class: 'Input__area', maxlength: 400, placeholder: '例）大手製造業で商品企画を努めていましたが、自身のキャリアを見つめ直し、広告代理店へ転職しました。「未経験で転職するコツは？」「広告代理店って正直どうなの？」にお答えします'
+      .Text
+        について話します！
+    .Format03
+      .Format-content01    
+        %h4.Format-content01__left
+          謝礼金額（30分あたり）
+        %h6.Format-content01__right
+          必須
+      %h5.Format-content02
+        通常は有料を選びます。より多くの申し込みがほしい場合は無料がおすすめです。
+        %br
+        経験談を話した回数が増えると、設定できる謝礼金額が最大10000円まで上がります。
+      .Input
+        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
+        -# = form.collection_select :shippingcost_id, Shippingcost.all, :id, :name, {include_blank: "選択してください"}, {class: 'input-string__form'}
+    .Format04
+      .Format-content01    
+        %h4.Format-content01__left
+          話す形式
+      %h5.Format-content02
+        通ビデオ通話または対面で話すことができます。
+        %br
+        ビデオ通話のみで話したい場合はチェックを入れてください。
+      .Check
+        = form.check_box :sex ,{checked: true}, "true", "false"
+        %span ビデオ通話のみ可能
+    .Format03
+      .Format-content01
+        %h4.Format-content01__left
+          話す時間
+      %h5.Format-content02
+        30分から最長３時間まで（30分ごとに選択できます）
+      .Input
+        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
+        -# = form.collection_select :shippingcost_id, Shippingcost.all, :id, :name, {include_blank: "選択してください"}, {class: 'input-string__form'}
+    .Format03
+      .Format-content01    
+        %h4.Format-content01__left
+          業界（業種）を選択する
+      %h5.Format-content02
+        １つ選択してください
+      .Input
+        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
+        -# = form.collection_select :shippingcost_id, Shippingcost.all, :id, :name, {include_blank: "選択してください"}, {class: 'input-string__form'}
+    .Format03
+      .Format-content01    
+        %h4.Format-content01__left
+          職種を選択する
+      %h5.Format-content02
+        １つ選択してください
+      .Input
+        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
+        -# = form.collection_select :shippingcost_id, Shippingcost.all, :id, :name, {include_blank: "選択してください"}, {class: 'input-string__form'}
+    .Format03
+      .Format-content01    
+        %h4.Format-content01__left
+          都道府県を選択する
+      %h5.Format-content02
+        現在働いている企業の都道府県を選択してください。
+      .Input
+        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
+        -# = form.collection_select :shippingcost_id, Shippingcost.all, :id, :name, {include_blank: "選択してください"}, {class: 'input-string__form'}
+    .Button-content
+      = form.submit '内容を登録する', class: 'Button-content__btn'
