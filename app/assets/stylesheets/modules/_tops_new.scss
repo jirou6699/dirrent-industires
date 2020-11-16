@@ -4,7 +4,6 @@
 
 .Create-wrapper {
   width: 600px;
-  font-size: 20px;
   margin: 0 auto;
   .Title01 {
     margin: 70px 0 40px;
@@ -18,7 +17,6 @@
       display: flex;
       margin: 40px 0 15px;
       &__left {
-        font-size: 14px;
         line-height: 27px;
       }
       &__right {
@@ -27,7 +25,6 @@
         border-radius: 5px;
         margin-left: 20px;
         padding: 0 3px;
-        font-size: 10px;
         line-height: 27px;
       }
     }
@@ -38,6 +35,175 @@
         border-radius: 10px;
         border: 0.5px solid gray;
         padding: 20px;
+      }
+    }
+  }
+  .Title03 {
+    border-left: 5px solid lightskyblue;
+    padding-left: 5px;
+    margin-top: 65px;
+  }
+  .Example {
+    width: 600px;
+    height: 455px;
+    background-color: honeydew;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 35px 0;
+  }
+  .Example-top {
+    &__text {
+      margin: 20px 0;
+    }
+  }
+  .Example-middle {
+    margin: 20px 0;
+    &__title {
+      margin-bottom: 5px;
+    }
+    &__sentence{
+      margin: 3px 0 0 20px;
+      &--text {
+        font-size: 14px;
+      }
+    }
+  }
+  .Format01 {
+    .Format01-top {
+      display: flex;
+      justify-content: space-between;
+      margin: 40px 0 15px;
+      .Format-content01 {
+        display: flex;
+        &__left {
+          line-height: 30px;
+        }
+        &__right {
+          color: red;
+          border: 0.5px solid red;
+          border-radius: 5px;
+          margin-left: 20px;
+          padding: 0 3px;
+          line-height: 30px;
+        }
+      }
+      .Format-content02 {
+        line-height: 30px;
+
+      }
+    }
+    .Input {
+      &__text {
+        width: 600px;
+        height: 50px;
+        border-radius: 10px;
+        border: 0.5px solid gray;
+        padding: 20px;
+      }
+    }
+    .Text {
+      text-align: right;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+  }
+
+  .Format02 {
+    .Format-content01 {
+      display: flex;
+      justify-content: space-between;
+      margin: 40px 0 15px;
+      &__left {
+        line-height: 27px;
+      }
+      &__right {
+        border-radius: 5px;
+        margin-left: 20px;
+        padding: 0 3px;
+        line-height: 27px;
+      }
+    }
+    .Format-content02 {
+      margin: 10px 0;
+      color: grey;
+    }
+    .Input {
+      &__text {
+        width: 600px;
+        height: 50px;
+        border-radius: 10px;
+        border: 0.5px solid gray;
+        padding: 20px;
+      }
+      &__area{
+        width: 600px;
+        height: 144px;
+        border-radius: 10px;
+        border: 0.5px solid gray;
+        padding: 20px;
+      }
+    }
+    .Text {
+      text-align: right;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+  }
+  .Format03 {
+    .Format-content01 {
+      display: flex;
+      margin: 40px 0 15px;
+      &__left {
+        line-height: 27px;
+      }
+      &__right {
+        color: red;
+        border: 0.5px solid red;
+        border-radius: 5px;
+        margin-left: 20px;
+        padding: 0 3px;
+        line-height: 27px;
+      }
+    }
+    .Format-content02 {
+      margin: 10px 0;
+      color: grey;
+    }
+    .Input {
+      &__text {
+        width: 600px;
+        height: 50px;
+        border-radius: 10px;
+        border: 0.5px solid gray;
+        padding: 20px;
+      }
+      &__area{
+        width: 600px;
+        height: 144px;
+        border-radius: 10px;
+        border: 0.5px solid gray;
+        padding: 20px;
+      }
+    }
+    .Text {
+      text-align: right;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+  }
+  .Format04 {
+    .Format-content01 {
+      margin: 40px 0 15px;
+      &__left {
+        line-height: 27px;
+      }
+    }
+    .Format-content02 {
+      margin: 10px 0;
+      color: grey;
+    }
+    .Check {
+      &__text {
       }
     }
   }
