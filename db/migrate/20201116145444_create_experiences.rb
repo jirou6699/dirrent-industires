@@ -8,7 +8,7 @@ class CreateExperiences < ActiveRecord::Migration[6.0]
       t.integer   :price_id
       t.string    :talk_time
       t.string    :industry_id
-      t.string    :occupation_id
+      t.string    :occupation
       t.integer   :prefecture_id
       t.timestamps
     end

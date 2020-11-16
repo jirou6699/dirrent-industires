@@ -96,8 +96,7 @@
         %br
         経験談を話した回数が増えると、設定できる謝礼金額が最大10000円まで上がります。
       .Input
-        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
-        -# = form.collection_select :shippingcost_id, Shippingcost.all, :id, :name, {include_blank: "選択してください"}, {class: 'input-string__form'}
+        = form.collection_select :price_id, Price.all, :id, :name, {include_blank: "選択してください"}, {class: 'Input__text'}
     .Format04
       .Format-content01    
         %h4.Format-content01__left
@@ -117,7 +116,6 @@
         30分から最長３時間まで（30分ごとに選択できます）
       .Input
         = form.number_field :talk_time, class: 'Input__text', placeholder: 'type a message', min: 30, max: 180
-        -# = form.collection_select :shippingcost_id, Shippingcost.all, :id, :name, {include_blank: "選択してください"}, {class: 'input-string__form'}
     .Format03
       .Format-content01    
         %h4.Format-content01__left
@@ -126,16 +124,14 @@
         １つ選択してください
       .Input
         = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
-        -# = form.collection_select :shippingcost_id, Shippingcost.all, :id, :name, {include_blank: "選択してください"}, {class: 'input-string__form'}
     .Format03
       .Format-content01    
         %h4.Format-content01__left
-          職種を選択する
+          職種を入力する
       %h5.Format-content02
-        １つ選択してください
+        現職で担当している職種を入力してください
       .Input
-        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
-        -# = form.collection_select :shippingcost_id, Shippingcost.all, :id, :name, {include_blank: "選択してください"}, {class: 'input-string__form'}
+        = form.text_field :occupation, class: 'Input__text', placeholder: '例）リラクゼーション・セラピスト'
     .Format03
       .Format-content01    
         %h4.Format-content01__left
@@ -143,7 +139,6 @@
       %h5.Format-content02
         現在働いている企業の都道府県を選択してください。
       .Input
-        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
-        -# = form.collection_select :shippingcost_id, Shippingcost.all, :id, :name, {include_blank: "選択してください"}, {class: 'input-string__form'}
+        = form.collection_select :prefeture_id, Prefecture.all, :id, :name, {include_blank: "選択してください"}, {class: 'Input__text'}
     .Button-content
       = form.submit '内容を登録する', class: 'Button-content__btn'

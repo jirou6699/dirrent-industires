@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_11_16_145444) do
     t.integer "price_id"
     t.string "talk_time"
     t.string "industry_id"
-    t.string "occupation_id"
+    t.string "occupation"
     t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
