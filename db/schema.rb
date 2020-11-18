@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2020_11_16_145444) do
     t.string "title"
     t.text "text"
     t.integer "price_id"
+    t.integer "talk"
     t.string "talk_time"
     t.string "industry_id"
     t.string "occupation"

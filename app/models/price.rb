@@ -12,5 +12,5 @@ class Price < ActiveHash::Base
     {id: 10, name: "5000円"},
   ]
 include ActiveHash::Associations
-has_many :experiencies
+has_many :experiences
 end

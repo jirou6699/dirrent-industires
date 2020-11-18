@@ -6,6 +6,7 @@ class CreateExperiences < ActiveRecord::Migration[6.0]
       t.string    :title
       t.text      :text
       t.integer   :price_id
+      t.integer   :talk
       t.string    :talk_time
       t.string    :industry_id
       t.string    :occupation
