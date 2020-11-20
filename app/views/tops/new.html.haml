@@ -124,9 +124,6 @@
         １つ選択してください
       .Input-js
         = form.collection_select :industry_id, Industry.roots, :id, :name, {prompt: '選択してください'}, {class: 'Input-js__text', id: 'parent-category'}
-        -# .input-string
-          -# .input-string__category
-            Category.roots, :id, :name, {prompt: '選択してください'}, {class: 'input-string__category--form', id: 'parent-category'}
     .Format03
       .Format-content01    
         %h4.Format-content01__left
