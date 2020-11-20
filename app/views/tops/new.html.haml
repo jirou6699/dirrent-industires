@@ -116,14 +116,17 @@
         30分から最長３時間まで（30分ごとに選択できます）
       .Input
         = form.number_field :talk_time, class: 'Input__text', placeholder: 'type a message', min: 30, max: 180
-    -# .Format03
-    -#   .Format-content01    
-    -#     %h4.Format-content01__left
-    -#       業界（業種）を選択する
-    -#   %h5.Format-content02
-    -#     １つ選択してください
-    -#   .Input
-    -#     = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
+    .Format03
+      .Format-content01    
+        %h4.Format-content01__left
+          業界（業種）を選択する
+      %h5.Format-content02
+        １つ選択してください
+      .Input
+        = form.collection_select :industry_id, Industry.roots, :id, :name, {prompt: '選択してください'}, {class: 'Input__text', id: 'parent-category'}
+        -# .input-string
+          -# .input-string__category
+            Category.roots, :id, :name, {prompt: '選択してください'}, {class: 'input-string__category--form', id: 'parent-category'}
     .Format03
       .Format-content01    
         %h4.Format-content01__left
