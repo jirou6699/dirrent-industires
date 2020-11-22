@@ -13,12 +13,12 @@
 ActiveRecord::Schema.define(version: 2020_11_18_125352) do
 
   create_table "experiences", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "company"
-    t.string "position"
-    t.string "title"
+    t.string "company", null: false
+    t.string "position", null: false
+    t.string "title", null: false
     t.text "text"
-    t.integer "price_id"
-    t.integer "talk"
+    t.integer "price_id", null: false
+    t.string "talk"
     t.string "talk_time"
     t.string "industry_id"
     t.string "occupation"
