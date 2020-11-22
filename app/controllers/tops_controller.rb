@@ -14,11 +14,11 @@ class TopsController < ApplicationController
   end
 
   def create
-    @experience = Experience.new(experience_paramas)
+    @experience = Experience.new(experience_params)
     if @experience.save
       redirect_to root_path
     else
-      redirect_to new_top_path
+      redirect_to new_top_path, notice: "必須項目は入力してください"
     end
   end
 
@@ -35,7 +35,7 @@ class TopsController < ApplicationController
 
 
   private
-  def experience_paramas
+  def experience_params
     params.require(:experience).permit(:company, :position, :title, :text, :price_id, :talk, :talk_time, :industry_id, :occupation, :prefecture_id)
   end
 end
