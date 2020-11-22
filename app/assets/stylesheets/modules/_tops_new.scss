@@ -175,7 +175,7 @@
         height: 50px;
         border-radius: 10px;
         border: 0.5px solid gray;
-        padding: 20px;
+        padding: 10px;
       }
       &__area{
         width: 600px;
@@ -191,6 +191,51 @@
       font-size: 14px;
     }
   }
+  .Format03-js {
+    .Format-content01 {
+      display: flex;
+      margin: 40px 0 15px;
+      &__left {
+        line-height: 27px;
+      }
+      &__right {
+        color: red;
+        border: 0.5px solid red;
+        border-radius: 5px;
+        margin-left: 20px;
+        padding: 0 3px;
+        line-height: 27px;
+      }
+    }
+    .Format-content02 {
+      margin: 10px 0;
+      color: grey;
+    }
+    .Input-js {
+      &__text {
+        width: 600px;
+        height: 50px;
+        border-radius: 10px;
+        border: 0.5px solid gray;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      &__area{
+        width: 600px;
+        height: 144px;
+        border-radius: 10px;
+        border: 0.5px solid gray;
+        padding: 20px;
+      }
+    }
+    .Text {
+      text-align: right;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+  }
+
+
   .Format04 {
     .Format-content01 {
       margin: 40px 0 15px;

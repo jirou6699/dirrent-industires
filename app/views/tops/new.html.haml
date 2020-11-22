@@ -1,5 +1,5 @@
 .Create-wrapper
-  = form_with url: "#", local: true do |form|
+  =form_with model: @experience, url: tops_path, local: true do |form|
     %h2.Title01
       経験談を登録する
     %h3.Title02
@@ -11,7 +11,7 @@
         %h6.Format-content01__right
           必須
       .Input
-        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
+        = form.text_field :company, class: 'Input__text', placeholder: 'type a message'
     .Format
       .Format-content01    
         %h4.Format-content01__left
@@ -19,7 +19,7 @@
         %h6.Format-content01__right
           必須
       .Input
-        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
+        = form.text_field :position, class: 'Input__text', placeholder: 'type a message'
     %h4.Title03
       どんな内容について話しますか？
     .Example
@@ -70,7 +70,7 @@
         %h6.Format-content02
           0/40
       .Input
-        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
+        = form.text_field :title, class: 'Input__text', placeholder: 'type a message'
       .Text
         について話します！
     .Format02
@@ -82,22 +82,21 @@
       %h5.Format-content02
         経歴や内容の詳細、どんな人におすすめなのかなどを書きましょう！
       .Input
-        = form.text_area :name, class: 'Input__area', maxlength: 400, placeholder: '例）大手製造業で商品企画を努めていましたが、自身のキャリアを見つめ直し、広告代理店へ転職しました。「未経験で転職するコツは？」「広告代理店って正直どうなの？」にお答えします'
+        = form.text_area :text, class: 'Input__area', maxlength: 400, placeholder: '例）大手製造業で商品企画を努めていましたが、自身のキャリアを見つめ直し、広告代理店へ転職しました。「未経験で転職するコツは？」「広告代理店って正直どうなの？」にお答えします'
       .Text
         について話します！
     .Format03
       .Format-content01    
         %h4.Format-content01__left
-          謝礼金額（30分あたり）
+          金額（30分あたり）
         %h6.Format-content01__right
           必須
       %h5.Format-content02
         通常は有料を選びます。より多くの申し込みがほしい場合は無料がおすすめです。
         %br
-        経験談を話した回数が増えると、設定できる謝礼金額が最大10000円まで上がります。
+        経験談を話した回数が増えると、申し込み数が入りやすいです。
       .Input
-        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
-        -# = form.collection_select :shippingcost_id, Shippingcost.all, :id, :name, {include_blank: "選択してください"}, {class: 'input-string__form'}
+        = form.collection_select :price_id, Price.all, :id, :name, {include_blank: "選択してください"}, {class: 'Input__text'}
     .Format04
       .Format-content01    
         %h4.Format-content01__left
@@ -107,7 +106,7 @@
         %br
         ビデオ通話のみで話したい場合はチェックを入れてください。
       .Check
-        = form.check_box :sex ,{checked: true}, "true", "false"
+        = form.check_box :talk ,{checked: true}, "true", "false"
         %span ビデオ通話のみ可能
     .Format03
       .Format-content01
@@ -116,26 +115,23 @@
       %h5.Format-content02
         30分から最長３時間まで（30分ごとに選択できます）
       .Input
-        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
-        -# = form.collection_select :shippingcost_id, Shippingcost.all, :id, :name, {include_blank: "選択してください"}, {class: 'input-string__form'}
-    .Format03
+        = form.number_field :talk_time, class: 'Input__text', placeholder: 'type a message', min: 30, max: 180
+    .Format03-js
       .Format-content01    
         %h4.Format-content01__left
           業界（業種）を選択する
       %h5.Format-content02
         １つ選択してください
-      .Input
-        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
-        -# = form.collection_select :shippingcost_id, Shippingcost.all, :id, :name, {include_blank: "選択してください"}, {class: 'input-string__form'}
+      .Input-js
+        = form.collection_select :industry_id, Industry.roots, :id, :name, {prompt: '選択してください'}, {class: 'Input-js__text', id: 'parent-category'}
     .Format03
       .Format-content01    
         %h4.Format-content01__left
-          職種を選択する
+          職種を入力する
       %h5.Format-content02
-        １つ選択してください
+        現職で担当している職種を入力してください
       .Input
-        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
-        -# = form.collection_select :shippingcost_id, Shippingcost.all, :id, :name, {include_blank: "選択してください"}, {class: 'input-string__form'}
+        = form.text_field :occupation, class: 'Input__text', placeholder: '例）リラクゼーション・セラピスト'
     .Format03
       .Format-content01    
         %h4.Format-content01__left
@@ -143,7 +139,6 @@
       %h5.Format-content02
         現在働いている企業の都道府県を選択してください。
       .Input
-        = form.text_field :name, class: 'Input__text', placeholder: 'type a message'
-        -# = form.collection_select :shippingcost_id, Shippingcost.all, :id, :name, {include_blank: "選択してください"}, {class: 'input-string__form'}
+        = form.collection_select :prefecture_id, Prefecture.all, :id, :name, {include_blank: "選択してください"}, {class: 'Input__text'}
     .Button-content
       = form.submit '内容を登録する', class: 'Button-content__btn'
