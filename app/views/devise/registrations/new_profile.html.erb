@@ -1,0 +1,51 @@
+<h2>プロフィール情報登録</h2>
+
+<%= form_for @profile do |f| %>
+  <%# <%= render "devise/shared/error_messages", resource: @profile %>
+
+  <div class="field">
+    <%= f.label :アイコン写真 %><br />
+    <%= f.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :氏名 %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :年齢 %><br />
+    <%= f.text_field :age %>
+  </div>
+
+  <div class="field">
+    <%= f.label :性別 %><br />
+    <%= f.text_field :sex %>
+  </div>
+
+  <div class="field">
+    <%= f.label :学校名 %><br />
+    <%= f.text_field :school %>
+  </div>
+
+  <div class="field">
+    <%= f.label :学部・研究科・専攻 %><br />
+    <%= f.text_field :major %>
+  </div>
+
+  <div class="field">
+    <%= f.label :終了年 %><br />
+    <%= f.text_field :graduate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :在学中 %><br />
+    <%= f.text_field :student %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

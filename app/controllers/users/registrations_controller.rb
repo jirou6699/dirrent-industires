@@ -5,14 +5,35 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    @user = User.new
+  end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    @user = User.new(sign_up_params)
+    unless @user.valid?
+      flash.now[:alert] = "Eメールまたはパスワードを入力してください。"
+      render :new and return
+    end
+    session["devise.regist_data"] = {user: @user.attributes}
+    session["devise.regist_data"][:user]["password"] = params[:user][:password]
+    @profile = @user.build_profile
+    render :new_profile
+  end
+
+  def create_profile
+    @user = User.new(session["devise.regist_data"]["user"])
+    @profile = Profile.new(profile_params)
+    unless @profile.valid?
+      flash.now[:alert] = "入力漏れがあります"
+      render :new_profile and return
+    end
+    @user.build_profile(@profile.attributes)
+    @user.save
+    session["devise.regist_data"]["user"].clear
+    sign_in(:user, @user)
+  end
 
   # GET /resource/edit
   # def edit
@@ -38,8 +59,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  protected
 
+  def profile_params
+    params.require(:profile).permit(:image, :name, :age, :sex, :school, :major, :graduate, :student)
+  end
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
   #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
