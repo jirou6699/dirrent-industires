@@ -64,3 +64,5 @@ gem 'pry-rails'
 gem 'ancestry'
 
 gem 'jquery-rails'
+
+gem 'devise'
