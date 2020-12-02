@@ -1,0 +1,38 @@
+.Registration-wrapper
+  .Content
+    .Title
+      %h3 新規登録
+    = form_for(resource, as: resource_name, url: user_registration_path) do |f|
+      .Form-content
+        .Field
+          .Field__title
+            .Field__title--left
+              %h4 メールアドレス
+            .Field__title--right
+              必須
+          .Count
+            8/20
+        .Input
+          = f.email_field :email, class: "Input__field", autofocus: true, autocomplete: "email", placeholder: "sample@gmail.com"
+        .Field2
+          .Field2__title
+            .Field2__title--left
+              %h4 パスワード(６文字以上)
+            .Field2__title--right
+              必須
+          .Count
+            8/20
+        .Input2
+          = f.password_field :password, class: "Input2__field", autocomplete: "new-password"
+        .Field2
+          .Field2__title2
+            .Field2__title2--left
+              %h4 パスワード再入力(６文字以上)
+            .Field2__title--right
+              必須
+          .Count
+            8/20
+        .Input2
+          = f.password_field :password_confirmation, class: "Input2__field", autocomplete: "new-password"
+      .Actions
+        = f.submit "次へ", class: "Actions__btn"

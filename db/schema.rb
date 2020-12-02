@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_11_26_115142) do
     t.integer "price_id", null: false
     t.string "talk"
     t.string "talk_time"
-    t.integer "industry_id"
+    t.string "industry_id"
     t.string "occupation"
     t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
@@ -35,13 +35,12 @@ ActiveRecord::Schema.define(version: 2020_11_26_115142) do
   end
 
   create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "image"
     t.string "name"
-    t.integer "age"
+    t.integer "age_id"
     t.string "sex"
     t.string "school"
     t.string "major"
-    t.integer "graduate"
+    t.integer "graduate_id"
     t.string "student"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false

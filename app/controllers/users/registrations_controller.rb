@@ -62,7 +62,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   protected
 
   def profile_params
-    params.require(:profile).permit(:image, :name, :age, :sex, :school, :major, :graduate, :student)
+    params.require(:profile).permit(:name, :age_id, :sex, :school, :major, :graduate_id, :student)
   end
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
