@@ -1,5 +1,6 @@
 class TopsController < ApplicationController
   protect_from_forgery except: :create
+
   def index
   end
 
@@ -36,6 +37,6 @@ class TopsController < ApplicationController
 
   private
   def experience_params
-    params.require(:experience).permit(:company, :position, :title, :text, :price_id, :talk, :talk_time, :industry_id, :occupation, :prefecture_id)
+    params.require(:experience).permit(:company, :position, :title, :text, :price_id, :talk, :talk_time, :industry_id, :occupation, :prefecture_id, :image)
   end
 end

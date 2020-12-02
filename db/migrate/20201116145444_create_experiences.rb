@@ -5,6 +5,7 @@ class CreateExperiences < ActiveRecord::Migration[6.0]
       t.string    :position,         null: false
       t.string    :title,            null: false
       t.text      :text
+      t.string    :image
       t.integer   :price_id,         null: false
       t.string    :talk
       t.string    :talk_time
