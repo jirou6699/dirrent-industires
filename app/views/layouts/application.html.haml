@@ -14,8 +14,7 @@
         .Center-left__logo
           CREEDO
       .Center-right
-        .Center-right__login
-          Login
+        =link_to 'Login', new_user_session_path, class:"Center-right__login"
   = render 'layouts/notifications'
   = yield
 

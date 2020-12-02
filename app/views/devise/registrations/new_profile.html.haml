@@ -1,0 +1,77 @@
+.Next-wrapper
+  .Content
+    .Title
+      %h3 プロフィール情報登録
+    = form_for @profile do |f|
+      .Form-content
+        .Field
+          .Field__title
+            .Field__title--left
+              %h4 氏名
+            .Field__title--right
+              必須
+          .Count
+            8/20
+        .Input
+          = f.text_field :name, class: "Input__field", placeholder: "鈴木 太郎"
+      .Form-content
+        .Field
+          .Field__title
+            .Field__title--left
+              %h4 年齢
+            .Field__title--right
+              必須
+          .Count
+            8/20
+        .Input
+          = f.collection_select :age_id, Age.all, :id, :name, {include_blank: "選択してください"}, {class: 'Input__field'}
+      .Form-content
+        .Field
+          .Field__title
+            .Field__title--left
+              %h4 性別
+            .Field__title--right
+              必須
+        .Input-radio
+          = f.radio_button :sex, "男性"
+          %span 男
+          = f.radio_button :sex, "女性", class:"Input-radio__lady" 
+          %span 女
+      .Form-content
+        .Field
+          .Field__title
+            .Field__title--left
+              %h4 学校名
+            .Field__title--right
+              必須
+          .Count
+            8/20
+        .Input
+          = f.text_field :school, class: "Input__field"
+      .Form-content
+        .Field2
+          .Field2__title
+            .Field2__title--left
+              %h4 学部・研究科・専攻
+            .Field2__title--right
+              必須
+          .Count
+            8/20
+        .Input
+          = f.text_field :major, class: "Input__field"
+      .Form-content
+        .Field
+          .Field__title
+            .Field__title--left
+              %h4 終了年
+            .Field__title--right
+              必須
+          .Count
+            8/20
+        .Input
+          = f.collection_select :graduate_id, Graduate.all, :id, :name, {include_blank: "選択してください"}, {class: 'Input__field'}
+          = f.check_box :student ,{checked: false}, "true", "false"
+          %span 在学中
+      .Actions
+        = f.submit "Sign up", class: "Actions__btn"
+
