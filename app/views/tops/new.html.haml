@@ -95,8 +95,10 @@
         ご自身の写真などを登録される方が申し込み数は増加しますのでおすすめです！
         %br
         写真以外のイラストなどでも構いません。
-      .Input
-        = form.file_field :image, class: '#'
+      .View_box
+      .Input-js
+        = form.label :image, class: 'Input-js__image' do
+          = form.file_field :image, class: 'Input-js__image--file'
     .Format03
       .Format-content01    
         %h4.Format-content01__left
