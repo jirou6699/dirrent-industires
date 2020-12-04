@@ -88,6 +88,21 @@
     .Format03
       .Format-content01    
         %h4.Format-content01__left
+          表示アイコン
+        %h6.Format-content01__right
+          必須
+      %h5.Format-content02
+        ご自身の写真などを登録される方が申し込み数は増加しますのでおすすめです！
+        %br
+        写真以外のイラストなどでも構いません。
+      .View_box
+      .Preview
+        = form.label :image, class: 'Preview__image' do
+          .Preview__image--text アイコンを登録する
+        = form.file_field :image, class: 'Preview__image--file'
+    .Format03
+      .Format-content01    
+        %h4.Format-content01__left
           金額（30分あたり）
         %h6.Format-content01__right
           必須

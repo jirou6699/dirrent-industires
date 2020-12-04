@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2020_11_26_115142) do
     t.string "position", null: false
     t.string "title", null: false
     t.text "text"
+    t.string "image"
     t.integer "price_id", null: false
     t.string "talk"
     t.string "talk_time"
