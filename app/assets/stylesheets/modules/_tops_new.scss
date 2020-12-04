@@ -171,6 +171,15 @@
     }
     .Preview {
       &__image {
+        &--text {
+          margin-top: 5px;
+          text-align: center;
+          width: 200px;
+          padding: 3px 10px;
+          background-color: lightsalmon;
+          color: white;
+          border-radius: 10px;
+        }
         &--file {
           display: none;
         }
@@ -178,6 +187,15 @@
     }
     .Img_view {
       border-radius: 50%;
+    }
+    .img_del {
+      text-align: center;
+      width: 200px;
+      padding: 6px 43px;
+      text-decoration: none;
+      background-color: lightskyblue;
+      color: white;
+      border-radius: 10px;
     }
     .Input {
       &__text {

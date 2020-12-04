@@ -14,7 +14,7 @@ $(document).ready(function () {
     
     var img = '<img width="200", height="200" alt="" class="Img_view"><br><a href="#" class="img_del">画像を削除する</a>';
     view_box.append(img);
-    view_text.empty();
+    // view_text.empty();
       fileRdr.onload = function() {    
         view_box.find('img').attr('src', fileRdr.result);
         img_del(view_box); 
