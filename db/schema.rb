@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_11_26_115142) do
     t.string "industry_id"
     t.string "occupation"
     t.integer "prefecture_id"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

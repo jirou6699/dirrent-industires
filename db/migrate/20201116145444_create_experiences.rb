@@ -12,6 +12,7 @@ class CreateExperiences < ActiveRecord::Migration[6.0]
       t.string    :industry_id
       t.string    :occupation
       t.integer   :prefecture_id
+      t.integer   :user_id  
       t.timestamps
     end
   end
