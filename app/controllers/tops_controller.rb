@@ -37,6 +37,6 @@ class TopsController < ApplicationController
 
   private
   def experience_params
-    params.require(:experience).permit(:company, :position, :title, :text, :price_id, :talk, :talk_time, :industry_id, :occupation, :prefecture_id, :image)
+    params.require(:experience).permit(:company, :position, :title, :text, :price_id, :talk, :talk_time, :industry_id, :occupation, :prefecture_id, :image).merge(user_id: current_user.id)
   end
 end

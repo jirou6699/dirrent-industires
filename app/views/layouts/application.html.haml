@@ -13,11 +13,27 @@
       .Center-left
         .Center-left__logo
           CREEDO
-      .Center-right
-        =link_to 'Login', new_user_session_path, class:"Center-right__login"
+      - unless user_signed_in?
+        .Center-right
+          =link_to 'Login', new_user_session_path, class:"Center-right__login"
+      - else
+        .Signed-in
+          .Signed-in__content
+            = link_to new_top_path, class: "Signed-in__content--link" do
+              = icon('fas', 'edit', class: 'Signed-in__content--icon')
+              %span.Signed-in__content--text 経験談を登録する
+          .Signed-in__content
+            = link_to "#", class: "Signed-in__content--link" do
+              = icon('fas', 'comments', class: 'Signed-in__content--icon')
+              %span.Signed-in__content--text メッセージを確認する
+          .Signed-in__content
+            = link_to "#", class: "Signed-in__content--link" do
+              = icon('fas', 'users', class: 'Signed-in__content--icon')
+              %span.Signed-in__content--text マイページ
   = render 'layouts/notifications'
+  
   = yield
-
+  
   .Footer
     .Center
       .Followus
