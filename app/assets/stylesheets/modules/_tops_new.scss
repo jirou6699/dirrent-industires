@@ -169,6 +169,16 @@
       margin: 10px 0;
       color: grey;
     }
+    .Preview {
+      &__image {
+        &--file {
+          display: none;
+        }
+      }
+    }
+    .Img_view {
+      border-radius: 50%;
+    }
     .Input {
       &__text {
         width: 600px;
