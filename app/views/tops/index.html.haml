@@ -153,75 +153,35 @@
     .Member-tag__text
       メンバー紹介
   .Cards-box
-    .Card
-      .Card-topic
-        .Card-topic__title
-          海外ベンチャー、国内大手、国内ベンチャーの違いについて話します！
-        .Topic-middle
-          .Topic-middle__left
-            .Topic-middle__left--text
-              メンバー募集中
-          .Topic-middle__right
-            ¥ 5000
-      .Topic-under
-        .Topic-under__img
-          = image_tag 'middle1.jpg', size: "50x50", alt: "test", class: "Topic-under__img--file"
-        .Topic-under__right
-          .Topic-under__right--text01
-            株ビスリーチ/海外事業部/マネージャー
-          .Topic-under__right--text02
-            2016年9月〜
-    .Card
-      .Card-topic
-        .Card-topic__title
-          海外ベンチャー、国内大手、国内ベンチャーの違いについて話します！
-        .Topic-middle
-          .Topic-middle__left
-            .Topic-middle__left--text
-              メンバー募集中
-          .Topic-middle__right
-            ¥ 5000
-      .Topic-under
-        .Topic-under__img
-          = image_tag 'middle1.jpg', size: "50x50", alt: "test", class: "Topic-under__img--file"
-        .Topic-under__right
-          .Topic-under__right--text01
-            株ビスリーチ/海外事業部/マネージャー
-          .Topic-under__right--text02
-            2016年9月〜
-    .Card
-      .Card-topic
-        .Card-topic__title
-          海外ベンチャー、国内大手、国内ベンチャーの違いについて話します！
-        .Topic-middle
-          .Topic-middle__left
-            .Topic-middle__left--text
-              メンバー募集中
-          .Topic-middle__right
-            ¥ 5000
-      .Topic-under
-        .Topic-under__img
-          = image_tag 'middle1.jpg', size: "50x50", alt: "test", class: "Topic-under__img--file"
-        .Topic-under__right
-          .Topic-under__right--text01
-            株ビスリーチ/海外事業部/マネージャー
-          .Topic-under__right--text02
-            2016年9月〜
-    .Card
-      .Card-topic
-        .Card-topic__title
-          海外ベンチャー、国内大手、国内ベンチャーの違いについて話します！
-        .Topic-middle
-          .Topic-middle__left
-            .Topic-middle__left--text
-              メンバー募集中
-          .Topic-middle__right
-            ¥ 5000
-      .Topic-under
-        .Topic-under__img
-          = image_tag 'middle1.jpg', size: "50x50", alt: "test", class: "Topic-under__img--file"
-        .Topic-under__right
-          .Topic-under__right--text01
-            株ビスリーチ/海外事業部/マネージャー
-          .Topic-under__right--text02
-            2016年9月〜
+    - @new_experience.each do |experience|
+      = link_to "#", class:"Card" do
+        .Card-topic
+          .Card-topic__title
+            =experience.title
+          .Topic-middle
+            - if experience.talk == "true"
+              .Topic-middle__red
+                .Topic-middle__red--text
+                  ビデオ通話のみ可能
+            - else
+              .Topic-middle__blue
+                .Topic-middle__blue--text
+                  対面で面会が可能
+            .Topic-middle__right
+              =experience.price.name
+        .Topic-under
+          .Topic-under__img
+            =image_tag experience.image.url, size: "50x50", alt: "test", class: "Topic-under__img--file"
+          .Topic-under__right
+            .Topic-under__right--text
+              =experience.company
+            .Topic-under__right-info
+              .Topic-under__right-info--text
+                =experience.position 
+              .Topic-under__right-info--text01
+                =experience.occupation 
+            .Topic-under__year
+              =experience.join_year
+              %span 年
+              =experience.join_month
+              %span 月〜

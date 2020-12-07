@@ -2,6 +2,7 @@ class TopsController < ApplicationController
   protect_from_forgery except: :create
 
   def index
+    @new_experience = Experience.order('created_at DESC')
   end
 
   def new
@@ -37,6 +38,6 @@ class TopsController < ApplicationController
 
   private
   def experience_params
-    params.require(:experience).permit(:company, :position, :title, :text, :price_id, :talk, :talk_time, :industry_id, :occupation, :prefecture_id, :image).merge(user_id: current_user.id)
+    params.require(:experience).permit(:company, :position, :title, :text, :price_id, :talk, :talk_time, :industry_id, :occupation, :prefecture_id, :image, :join_year, :join_month).merge(user_id: current_user.id)
   end
 end

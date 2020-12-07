@@ -20,6 +20,25 @@
           必須
       .Input
         = form.text_field :position, class: 'Input__text', placeholder: 'type a message'
+    .Format
+      .Format-content01    
+        %h4.Format-content01__left
+          職種を入力する
+        %h6.Format-content01__right
+          必須
+      .Input
+        = form.text_field :occupation, class: 'Input__text', placeholder: '例) 営業職'
+    .Format
+      .Format-content01    
+        %h4.Format-content01__left
+          所属年を記入する
+        %h6.Format-content01__right
+          必須
+      .Input
+        = form.text_field :join_year, class: 'Input__year', placeholder: '2020'
+        %span 年
+        = form.text_field :join_month, class: 'Input__month', placeholder: '4'
+        %span 月
     %h4.Title03
       どんな内容について話しますか？
     .Example
@@ -121,7 +140,7 @@
         %br
         ビデオ通話のみで話したい場合はチェックを入れてください。
       .Check
-        = form.check_box :talk ,{checked: true}, "true", "false"
+        = form.check_box :talk ,{checked: false}, "true", "false"
         %span ビデオ通話のみ可能
     .Format03
       .Format-content01
@@ -138,15 +157,7 @@
       %h5.Format-content02
         １つ選択してください
       .Input-js
-        = form.collection_select :industry_id, Industry.roots, :id, :name, {prompt: '選択してください'}, {class: 'Input-js__text', id: 'parent-category'}
-    .Format03
-      .Format-content01    
-        %h4.Format-content01__left
-          職種を入力する
-      %h5.Format-content02
-        現職で担当している職種を入力してください
-      .Input
-        = form.text_field :occupation, class: 'Input__text', placeholder: '例）リラクゼーション・セラピスト'
+        = form.collection_select :industry_id, Industry.roots, :id, :name, {prompt: '選択してください'}, {class: 'Input-js__text', id: 'parent-category'} 
     .Format03
       .Format-content01    
         %h4.Format-content01__left
