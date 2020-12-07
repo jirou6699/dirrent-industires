@@ -208,6 +208,8 @@
       background-color: lightseagreen;
       border-radius: 10px;
       margin-right: 10px;
+      text-decoration: none;
+      color: black;
       .Card-topic {
         width: 265px;
         height: 137px;
@@ -220,8 +222,18 @@
         .Topic-middle {
           display: flex;
           justify-content: space-between;
-          &__left {
+          &__red {
             background-color: palevioletred;
+            border-radius: 10px;
+            &--text {
+              padding: 4px 8px;
+              font-size: 12px;
+              color: white;
+              font-weight: bold;
+            }
+          }
+          &__blue {
+            background-color: lightskyblue;
             border-radius: 10px;
             &--text {
               padding: 4px 8px;
@@ -241,11 +253,25 @@
             color: white;
           }
         }
-        &__right {
-          &--text01, &--text02 {
+        &__right{
+          &--text{
             font-size: 12px;
             color: white;
           }
+        }
+        &__right-info {
+          display: flex;
+          &--text, &--text01{
+            font-size: 12px;
+            color: white;
+          }
+          &--text01::before{
+            content: "/";
+          }
+        }
+        &__year {
+          font-size: 12px;
+          color: white;
         }
       }
     }

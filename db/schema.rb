@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2020_11_26_115142) do
   create_table "experiences", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "company", null: false
     t.string "position", null: false
+    t.string "occupation", null: false
     t.string "title", null: false
     t.text "text"
     t.string "image"
@@ -22,8 +23,9 @@ ActiveRecord::Schema.define(version: 2020_11_26_115142) do
     t.string "talk"
     t.string "talk_time"
     t.string "industry_id"
-    t.string "occupation"
     t.integer "prefecture_id"
+    t.integer "join_year"
+    t.integer "join_month"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
